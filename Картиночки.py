@@ -26,7 +26,7 @@ for i in range(width):
         a = pix[i, j][0]
         b = pix[i, j][1]
         c = pix[i, j][2]
-        draw.point((j, i), (255 - c, 255 - a, 255 - b))
+        draw.point((j-1, i+1), (186 - c, 25 - a, 155 - b))
 myimage
 # 9 задание----------------------------------------------------------------------------------------------
 from PIL import Image, ImageDraw, ImageFont
