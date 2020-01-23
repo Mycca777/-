@@ -14,7 +14,7 @@ for i in range(10):
     y += 40
 a[0].save('moving_ball.gif', format='GIF', append_images=frames[1:], save_all=True, duration=100, loop=0)
 # 4 задание ---------------------------------------------------------------------------------------------
-myimage = Image.open(a)
+myimage = Image.open("Elbrus.jpg")
 myimage.resize((1,1))
 draw = ImageDraw.Draw(myimage)
 width, height = myimage.size
