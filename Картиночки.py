@@ -1,4 +1,4 @@
-# 3 задание ------------------------------------------------------------------------------------------
+# 7 задание ------------------------------------------------------------------------------------------
 from PIL import Image, ImageDraw
 def gifka(width, height, x, y, size):
     img = Image.new('RGB', (width, height), (255, 255, 255))
@@ -44,3 +44,17 @@ def zadanie9(a):
     result = result.transpose(Image.FLIP_LEFT_RIGHT)
     result.save(a)
 zadanie9("file1.png")
+# 3 задание-----------------------------------------------------------------------------------------------
+def perenochic(a, b):
+    img = Image.open(a)
+    width, height = img.size
+    massiv1 = []
+    for x in range(width):
+        for y in range(height):
+            # print((x,y))
+            kaka = img.getpixel((x,y))
+            pic = (kaka[0], kaka[1], kaka[2], 0)
+            img.putpixel((x,y), pic)
+    img = img.convert('L')
+    img.save(b)
+perenochic("Elbrus.jpg", "fl.png")
