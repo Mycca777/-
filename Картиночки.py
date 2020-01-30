@@ -58,3 +58,12 @@ def perenochic(a, b):
     img = img.convert('L')
     img.save(b)
 perenochic("Elbrus.jpg", "fl.png")
+# 5 задание--------------------------------------------------------------------------------------------------
+from PIL import Image
+def image_test(im):
+    try:
+        img = Image.open(str(im))
+        return True
+    except OSError:
+        return False
+image_test('Elbrus.jpg')
